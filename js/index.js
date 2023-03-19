@@ -2,10 +2,10 @@ $(".marquee").marquee({
     allowCss3Support: true,
     css3easing: "linear",
     easing: "linear",
-    delayBeforeStart: 1000,
+    delayBeforeStart: 500,
     direction: "left",
     duplicated: true,
-    duration: 10000,
+    duration: 5000,
     gap: 50,
   });
 
