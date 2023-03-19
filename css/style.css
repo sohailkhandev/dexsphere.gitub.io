@@ -461,13 +461,17 @@ a {
   line-height: 2;
   margin: 1em 0;
 }
+.iconsContainer {
+  display: flex;
+}
 .iconsContainer .socialIcon{
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 48px;
   height: 48px;
   border-radius: 50%;
   text-align: center;
-  line-height: 3;
   text-transform: capitalize;
   background-color: #ffffff20;
   margin-right: 0.5em;
