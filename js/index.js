@@ -2,7 +2,7 @@ $(".marquee").marquee({
     allowCss3Support: true,
     css3easing: "linear",
     easing: "linear",
-    delayBeforeStart: 1000,
+    delayBeforeStart: 100,
     direction: "left",
     duplicated: true,
     duration: 10000,
