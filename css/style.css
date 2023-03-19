@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Russo+One&display=swap');
 
+
+/* ANIMATIONS */
+@keyframes bullAnimation {
+  0% {opacity: 1;}
+  50%{opacity: 0;}
+  100%  {opacity: 1;}
+}
+
+@keyframes barAnimation {
+  0% {transform: translateX(-3%);}
+  50%{transform: translateX(60%);}
+  100%  {transform: translateX(-3%);}
+}
+
+
 :root {
   --mainBg: #050810;
   --themeBlue: #27AFE8;
@@ -118,12 +133,13 @@ a {
   text-align: center;
   transition: 500ms all ease-in-out;
   font-size: 1.5em;
-  padding: 1em 1.5em;
+  padding: 0.5em 1.5em;
   border-radius: 50px;
   display: inline-block;
   margin-bottom: 1em;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
 }
 .mainBtn:hover {
   background-color: #fff;
@@ -260,10 +276,11 @@ a {
   overflow-x: auto;
 }
 .phaseCard {
-  max-width: 325px;
+  max-width: 375px;
+  padding: 0 1.5em;
 }
 .bullsContainer {
-  background-color: var(--themePink);
+  background-color: #FD3DCE30;
   height: 5px;
   width: 100%;
   display: flex;
@@ -272,6 +289,18 @@ a {
   top: 36%;
   left: 0px;
   z-index: 0;
+}
+.bullsContainer::after{
+  content: '';
+  display: inline-block;
+  background-color: var(--themePink);
+  height: 5px;
+  width: 80%;
+  position: absolute;
+  transition: 500ms all ease-in-out;
+  animation-name: barAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 .bullsContainer .bulls{
   position: relative;
@@ -284,6 +313,21 @@ a {
   border-radius: 50%;
   margin-left: 4em;
   margin-top: -24px;
+  animation-name: bullAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.bullsContainer > .bulls:first-child{
+  animation-delay: 1000ms;
+}
+.bullsContainer > .bulls:nth-child(2){
+  animation-delay: 2000ms;
+}
+.bullsContainer > .bulls:nth-child(3){
+  animation-delay: 3000ms;
+}
+.bullsContainer > .bulls:last-child{
+  animation-delay: 4000ms;
 }
 .bullsContainer .bulls::before{
   content: '';
@@ -389,7 +433,7 @@ a {
 }
 
 #joiningSection .mainBtn.withGradient {
-  padding: 1em 4em !important;
+  padding: 0.5em 4em !important;
   margin-bottom: 4em;
 }
 

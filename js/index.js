@@ -8,14 +8,19 @@ $(".marquee").marquee({
     duration: 10000,
     gap: 50,
   });
-  
-  var menuBtn = document.querySelectorAll(".menuBtn");
-  const dropdownFunction = (e) => {
-    e.preventDefault();
-    document.querySelector(".mainHeader").classList.toggle("active");
-  };
-  
-  for (let i = 0; i < menuBtn.length; i++) {
-    menuBtn[i].addEventListener("click", dropdownFunction);
-  }
+
+  $('.owl-carousel').owlCarousel({
+    loop: false,
+    margin: 10,
+    nav: false,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1.5
+      },
+      1000: {
+        items: 4,
+      }
+    }
+  })
   
