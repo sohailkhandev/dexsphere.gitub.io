@@ -43,10 +43,11 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
-  cursor: url(../assets/imgs/nftIcon.png), auto;
+  cursor: url(../assets/imgs/cursor.png), auto !important;
 }
 a {
   text-decoration: none !important;
+  cursor: url(../assets/imgs/cursor.png), auto !important;
 }
 /* font-family: 'Russo One', sans-serif;  */
 .contentWrapper {
@@ -243,6 +244,9 @@ a {
   overflow: hidden;
   position: relative;
 }
+.secHeading.text-start {
+  white-space: nowrap;
+}
 .phaseCard > h1 {
   font-size: 1.6em;
   font-weight: 600;
@@ -367,7 +371,24 @@ a {
 /* PARTENERS SECTION */
 #partenersSection {
   padding: 3em 2em;
-  background: linear-gradient(180deg, #27AFE810 0%, #FD3DCE10);
+  position: relative;
+  background-image: linear-gradient(180deg, #27AFE810 0%, #FD3DCE10);
+  z-index: 1;
+}
+#partenersSection::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(180deg, #27AFE850 0%, #FD3DCE50);;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+#partenersSection:hover::before {
+  opacity: 1;
 }
 .parteners {
   width: 100%;
@@ -420,10 +441,28 @@ a {
   text-align: center;
   padding: 1.5em 1em;
   background: linear-gradient(180deg, #27AFE810 0%, #FD3DCE10);
+  position: relative;
   border: 1px solid #FD3DCE40;
+  z-index: 1;
   margin: 1em 0;
+  overflow: hidden;
   border-radius: 1em;
   min-height: 265px;
+}
+.progressCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(180deg, #27AFE850 0%, #FD3DCE50);;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+.progressCard:hover::before {
+  opacity: 1;
 }
 .progressCard .cardHeading {
   font-weight: 600;
@@ -492,6 +531,10 @@ a {
   text-transform: capitalize;
   background-color: #ffffff20;
   margin-right: 0.5em;
+  transition: 300ms all ease-in-out;
+}
+.iconsContainer .socialIcon:hover{
+  opacity: 0.6;
 }
 .footerCard .cardHeadng {
   font-size: 1.4em;
@@ -504,6 +547,11 @@ a {
   font-weight: 500;
   display: block;
   margin-bottom: 1em;
+  transition: 300ms all ease;
+}
+.footerCard .footerLinksContainer > a:hover {
+  font-weight: 700;
+  color: #ffffff !important;
 }
 #mainFooter .footerInput {
   padding: 1em;
@@ -546,7 +594,7 @@ a {
 
 /* SMALL */
 @media  only screen and (max-width: 576px) {
-  .bullsContainer {
+  /* .bullsContainer {
     top: 50% !important;
-  }
+  } */
 }
