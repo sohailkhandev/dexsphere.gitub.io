@@ -43,6 +43,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
+  cursor: url(../assets/imgs/nftIcon.png), auto;
 }
 a {
   text-decoration: none !important;
