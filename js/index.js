@@ -10,10 +10,10 @@ $(".marquee").marquee({
   });
 
   $('.owl-carousel').owlCarousel({
-    loop: false,
+    loop: true,
     margin: 10,
     nav: false,
-    dots: true,
+    dots: false,
     responsive: {
       0: {
         items: 2.5

@@ -306,7 +306,7 @@ a {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 36%;
+  top: 275px ;
   left: 0px;
   z-index: 0;
 }
@@ -572,7 +572,7 @@ a {
     font-size: 0.8em !important;
   }
   .bullsContainer {
-    top: 40% !important;
+    top: 220px!important;
   }
 }
 
@@ -585,7 +585,7 @@ a {
     padding: 2em;
   }
   .bullsContainer {
-    top: 46% !important;
+    top: 170px !important;
   }
   .container-xxl.withBg.p-5 {
     padding: 2em !important;
@@ -594,7 +594,4 @@ a {
 
 /* SMALL */
 @media  only screen and (max-width: 576px) {
-  /* .bullsContainer {
-    top: 50% !important;
-  } */
 }
