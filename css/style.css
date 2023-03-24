@@ -244,7 +244,7 @@ a {
   overflow: hidden;
   position: relative;
 }
-.secHeading.text-start {
+#roadmapSection .secHeading.text-start {
   white-space: nowrap;
 }
 .phaseCard > h1 {
@@ -422,6 +422,9 @@ a {
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
+.infoValue::-webkit-scrollbar {
+  display: none;
+}
 .infoValue {
   background: linear-gradient(180deg, #27AFE810 0%, #FD3DCE10);
   padding: 0.5em 1em;
@@ -589,7 +592,13 @@ a {
   }
   .container-xxl.withBg.p-5 {
     padding: 2em !important;
+  }
+  #roadmapSection {
+    padding: 3em 1em;
   }  
+  .bulls {
+    margin-left: 0 !important;
+  }
 }
 
 /* SMALL */

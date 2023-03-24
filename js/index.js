@@ -16,7 +16,10 @@ $(".marquee").marquee({
     dots: false,
     responsive: {
       0: {
-        items: 2.5
+        items: 1.5
+      },
+      600: {
+        items: 2.5,
       },
       1000: {
         items: 4,
